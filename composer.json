@@ -1,0 +1,45 @@
+{
+    "name":              "secretary/core",
+    "description":       "Secrets Manager for PHP",
+    "type":              "library",
+    "license":           "MIT",
+    "keywords": [
+        "secrets",
+        "vault",
+        "secretsmanager",
+        "keyvault",
+        "secretary"
+    ],
+    "authors":           [
+        {
+            "name":  "Aaron Scherer",
+            "email": "aequasi@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require":           {
+        "php":                      "^7.1.0",
+        "symfony/options-resolver": "^4.0 || ^3.0"
+    },
+    "require-dev":       {
+        "phpunit/phpunit":   "^8.0",
+        "mockery/mockery":   "^1.2"
+    },
+    "suggest":           {
+        "secretary/aws-secrets-manager-adapter": "For reading secrets from AWS Secrets Manager",
+        "secretary/hashicorp-vault-adapter": "For reading secrets from Hashicorp Vault",
+        "secretary/psr6-cache-adapter": "For caching secrets using a PSR-6 Cache Interface",
+        "secretary/psr16-cache-adapter": "For caching secrets using a PSR-16 SimpleCache Interface",
+        "secretary/secretary-bundle": "For integrating Secretary with the Symfony Framework"
+    },
+    "autoload":          {
+        "psr-4": {
+            "Secretary\\": "src/"
+        }
+    },
+    "autoload-dev":      {
+        "psr-4": {
+            "Secretary\\Tests\\": "tests/"
+        }
+    }
+}
