@@ -11,16 +11,14 @@ declare(strict_types=1);
 namespace Secretary\Tests;
 
 use Mockery\MockInterface;
+use PHPUnit\Framework\Attributes\CoversNothing;
 use PHPUnit\Framework\TestCase;
 use Secretary\Adapter\AdapterInterface;
 use Secretary\Exception\SecretNotFoundException;
 use Secretary\Manager;
 use Secretary\Secret;
 
-/**
- * @internal
- * @coversNothing
- */
+#[CoversNothing]
 class ManagerTest extends TestCase
 {
     /**
